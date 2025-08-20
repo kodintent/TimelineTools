@@ -1,31 +1,21 @@
 {
-    "TIMELINE 1900-01-01+": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
+    "TIMELINE FOLDER 1": [
 		],
-    "TIMELINE 1968-06-21+ AU ADL MEL": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
+    "TIMELINE FOLDER 2": [
     ], 
-    "TIMELINE 1993-02-05+ AU BNE": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
-    ],
-    "TIMELINE 2008-02-25+ OS": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
-    ],
-    "TIMELINE 2015-04-05+ AU DRW": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
-    ],
-    "TIMELINE 2025-01-01+ AU DRW": [
-        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
+    "TIMELINE FOLDER 3": [
     ],
     "HELP": [
         {"case_sens": true, "regex": false, "find": "--", "replace": "-"},
         {"case_sens": true, "regex": false, "find": "- -", "replace": "-"},
-        {"case_sens": true, "regex": false, "find": "JP Kitakyushu", "replace": "JP Kitakyushu -"},
-        {"case_sens": false, "regex": true, "find": "malaysia KL (?P<capture>[^-])", "replace": "Malaysia KL - \\g<capture>"},
-        {"case_sens": true, "regex": true, "find": "osaka (?P<capture>[^-])", "replace": "Osaka - \\g<capture>"},
+        {"case_sens": true, "regex": false, "find": "find text", "replace": "replace text"},
+        {"case_sens": false, "regex": true, "find": "some text any case (?P<capture>[^-])", "replace": "other text \\g<capture>"},
+        {"case_sens": true, "regex": true, "find": "some text (?P<capture>[^-])", "replace": "other text  - \\g<capture>"},
         {"case_sens": false, "regex": true, "find": "(?P<id>\\d+)", "replace": "\\g<id>"},
         {"case_sens": false, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2}) (?P<time>\\d{2}-\\d{2}(-\\d{2})?) (?P<offset>[\\+]\\d{4})", "replace": "\\g<date>_\\g<time>\\g<offset>"},
-        {"json": "so fussy", "needs": "last list item no comma else error"}
+        {"case_sens": true, "regex": true, "find": "^(?P<date>\\d{4}-\\d{2}-\\d{2})_", "replace": "\\g<date> "}
+        {"python_re": "is non standard regex", "it_needs": "certain differences to work."}
+        {"json": "is so fussy", "it_needs": "the last list item no comma else error"}
     ]
 }
 
